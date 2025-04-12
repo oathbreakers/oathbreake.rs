@@ -3,6 +3,7 @@
 package oathbreakers.db
 
 import MigrationUtils
+import oathbreakers.db.tables.UploadsTable
 import oathbreakers.db.tables.UsersTable
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.ExperimentalDatabaseMigrationApi
@@ -17,7 +18,7 @@ const val URL = "jdbc:postgresql://localhost:5432/postgres"
 const val USER = "postgres"
 const val PASSWORD = "postgres"
 const val MIGRATIONS_DIRECTORY = "src/main/resources/migrations"
-val TABLES = arrayOf(UsersTable)
+val TABLES = arrayOf(UsersTable, UploadsTable)
 
 val database = Database.connect(
     url = URL,

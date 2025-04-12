@@ -6,6 +6,8 @@ import oathbreakers.routes.auth.authLoginPost
 import oathbreakers.routes.auth.authRegisterPost
 import oathbreakers.routes.index
 import oathbreakers.routes.profile.profileMeGet
+import oathbreakers.routes.wildcardGet
+import oathbreakers.routes.uploadPost
 
 fun Application.configureRouting() {
     routing {
@@ -15,5 +17,8 @@ fun Application.configureRouting() {
         authLoginPost()
 
         profileMeGet()
+
+        wildcardGet()
+        uploadPost()
     }
 }

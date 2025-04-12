@@ -3,6 +3,9 @@ database:
   username: "$DB_USER:postgres"
   password: "$DB_PASS:postgres"
 
+app:
+  data_dir: "$DATA_DIR:./data"
+
 ktor:
   application:
     modules:

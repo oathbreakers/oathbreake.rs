@@ -30,7 +30,6 @@ fun Application.configureSecurity() {
                         UsersTable.select(UsersTable.id).where(UsersTable.id.eq(id)).limit(1).singleOrNull()
                     } != null
                     if (userExists) {
-                        this@configureSecurity.log.info("success auth $id")
                         AuthenticatedUser(id)
                     } else {
                         this@configureSecurity.log.warn("User $id authenticated with a valid JWT, but doesn't exist")

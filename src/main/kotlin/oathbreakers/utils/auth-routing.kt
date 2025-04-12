@@ -24,5 +24,5 @@ fun Routing.authRoute(path: String, method: HttpMethod, block: RoutingHandler) {
 }
 
 fun Routing.authGet(path: String, block: RoutingHandler) = authRoute(path, HttpMethod.Get, block)
-fun Routing.authPost(path: String, block: RoutingHandler) = authRoute(path, HttpMethod.Put, block)
+fun Routing.authPost(path: String, block: RoutingHandler) = authRoute(path, HttpMethod.Post, block)
 fun Routing.authPut(path: String, block: RoutingHandler) = authRoute(path, HttpMethod.Put, block)
