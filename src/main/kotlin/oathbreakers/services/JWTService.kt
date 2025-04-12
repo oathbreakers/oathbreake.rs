@@ -19,6 +19,7 @@ class JWTService(config: ApplicationConfig) {
             .withAudience(audience)
             .withIssuer(issuer)
             .withExpiresAt(Clock.systemUTC().instant().plus(30, ChronoUnit.DAYS))
+            .withClaim("id", id)
             .sign(algorithm)
     }
 }
