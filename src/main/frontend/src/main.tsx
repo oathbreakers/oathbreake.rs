@@ -7,6 +7,8 @@ import {QueryClientProvider} from "@tanstack/react-query";
 import {queryClient} from "./lib/query.ts";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 
+import './globals.css'
+
 const router = createRouter({routeTree})
 
 declare module '@tanstack/react-router' {
